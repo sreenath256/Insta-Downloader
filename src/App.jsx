@@ -55,10 +55,15 @@ function App() {
             </div>
           )
         )}
-        <button className="button" onClick={handleDownload}>
-        <span>Download</span></button>
+        {
+          !videoData?
+          <button className="button" onClick={handleDownload}>
+        
+        <span>Download</span></button>:
+        null
+    }
       </div>
-    </div>
+      </div>
   );
 }
 
